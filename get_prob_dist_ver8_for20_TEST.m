@@ -70,15 +70,15 @@ function [RespMatrix,RespMatrixTraining,RespMatrixTesting,RespMatrixAllTrials,Pr
         
         %get sorted list of all responses in training data       
         cell_N_resps_sorted = sort(cell_N_resps_all); %sort all responses from training data 
-        total_range = cell_N_resps_sorted(length(cell_N_resps_sorted)) - cell_N_resps_sorted(1); %get total range of responses
+        %total_range = cell_N_resps_sorted(length(cell_N_resps_sorted)) - cell_N_resps_sorted(1); %get total range of responses
         max_resp = max(cell_N_resps_all);
         bin_width = round(total_range/bins,3); %get the width of each bin in terms of response mag
         
         %get bin thresholds for this cell
         cell_N_bin_thresh = zeros(1,bins-1);
         for b = 1:bins-1
-            bin = round((length(cell_N_resps_sorted)/bins)*b);
-            cell_N_bin_thresh(b) = cell_N_resps_sorted(bin);
+            %bin = round((length(cell_N_resps_sorted)/bins)*b);
+            cell_N_bin_thresh(b) = max_resp/bins;
         end
         BinThresh = [BinThresh ; cell_N_bin_thresh];
         
