@@ -68,7 +68,7 @@ function [RespMatrix,RespMatrixTraining,RespMatrixTesting,RespMatrixAllTrials,Pr
         RespMatrixTesting{c,1} = stim_trials_testing;
         RespMatrixAllTrials{c,1} = cell_N_resps_stimArray;
         
-        %get sorted list of all responses in training data       
+        %get sorted list of all responses in training data, testing github stuff       
         cell_N_resps_sorted = sort(cell_N_resps_all); %sort all responses from training data 
         %total_range = cell_N_resps_sorted(length(cell_N_resps_sorted)) - cell_N_resps_sorted(1); %get total range of responses
         max_resp = max(cell_N_resps_all);
