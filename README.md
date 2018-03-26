@@ -1,2 +1,2 @@
 # Testing-NBdecoder
-Using a simulated dataset to test the Naive Bayes decoder
+Using a simulated dataset or extra datasets to test/fix parameters of the Naive Bayes decoder
