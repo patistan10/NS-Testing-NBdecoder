@@ -22,7 +22,7 @@ save('all_groups.mat','group_nsresp','group_all');
 
 %% Decoding %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 types = {'NSresp','all'};%,'diverse_newthresh','allHartley','allNSresp'};
-groups{1} = group_nsresp(1:150);
+groups{1} = group_nsresp;
 groups{2} = group_all;
 
 for g = 1
